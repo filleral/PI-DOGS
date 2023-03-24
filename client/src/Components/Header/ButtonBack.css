@@ -1,28 +1,57 @@
-.button_back {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 60px;
-    background-color: var(--azul-oscuro);
-    border-radius: 30px;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .button_back:hover {
-    background-color: #e67e22;
-  }
-  
-  .button_back__icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 20px;
-  }
-  
-  .button_back__text {
-    text-transform: uppercase;
-  }
+.header_cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--azul-claro);
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.button-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--azul-oscuro);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button-container a:hover {
+  background-color: #e67e22;
+}
+
+.button-container a img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.about,
+.about_responsive {
+  margin-right: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--azul-oscuro);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.about:hover,
+.about_responsive:hover {
+  background-color: #e67e22;
+}

@@ -1,6 +1,5 @@
-
 import s from "./LandingPage.module.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import Footer from "../Footer/Footer";
 
@@ -12,7 +11,7 @@ import icon2 from "../../images/icons/passport.png";
 import icon3 from "../../images/icons/photo-shoot.png";
 import icon4 from "../../images/icons/earth.png";
 import icon5 from "../../images/icons/bagpack.png";
-import './../Details/DogDetail/VideoCard.css';
+import "./../Details/DogDetail/VideoCard.css";
 
 function LandingPage() {
   const [videoUrlList] = useState([
@@ -21,49 +20,66 @@ function LandingPage() {
     "https://player.vimeo.com/external/364841370.sd.mp4?s=8a3174708b70bbb90526d5aad598bd918223c202&profile_id=164&oauth2_token_id=57447761",
     "https://player.vimeo.com/external/358531424.sd.mp4?s=34a656580e2899b3e7b2fb0ece9a5910cfe53566&profile_id=164&oauth2_token_id=57447761",
     "https://player.vimeo.com/external/210743842.sd.mp4?s=fcf7c509e74a02a35175a2d9294eb2e25d6c74ef&profile_id=164&oauth2_token_id=57447761",
-    "https://player.vimeo.com/external/403278689.hd.mp4?s=791eaa4bfecbae421613ab0401a39b429542f18d&profile_id=174&oauth2_token_id=57447761"
+    "https://player.vimeo.com/external/403278689.hd.mp4?s=791eaa4bfecbae421613ab0401a39b429542f18d&profile_id=174&oauth2_token_id=57447761",
+    "https://player.vimeo.com/external/353569084.sd.mp4?s=f8537e25485085a53b1103a3cc2c1f2b9952b1a2&profile_id=165&oauth2_token_id=57447761",
+    "https://player.vimeo.com/external/436938412.sd.mp4?s=6264885c3c113b5d0441cd34a12777eaddb87601&profile_id=165&oauth2_token_id=57447761",
+    "https://player.vimeo.com/external/479032184.sd.mp4?s=8494309e0ae0bee8397869ae8870a17af9fd8ced&profile_id=165&oauth2_token_id=57447761",
+    "https://player.vimeo.com/external/479032164.sd.mp4?s=34217d57b8f0f4c17e134ab44d3851d406861e0b&profile_id=165&oauth2_token_id=57447761"
   ]);
-  const [currentVideoUrl, setCurrentVideoUrl] = useState("");
+  const [currentVideoUrl, setCurrentVideoUrl] = useState(localStorage.getItem('currentVideoUrl') || '');
 
   useEffect(() => {
     const randomIndex = Math.floor(Math.random() * videoUrlList.length);
-    setCurrentVideoUrl(videoUrlList[randomIndex]);
-  }, [videoUrlList])
-  return(
+    const newVideoUrl = videoUrlList[randomIndex];
+    setCurrentVideoUrl(newVideoUrl);
+    localStorage.setItem('currentVideoUrl', newVideoUrl);
+  }, [videoUrlList]);
+  return (
     <div>
       {/* --- header --- */}
       <header>
         <nav>
           <span className={s.logo}>DOGS</span>
-          <Link to="/home" className={s.acceder}>Acceder</Link>
+          <Link to="/home" className={s.acceder}>
+            Acceder
+          </Link>
         </nav>
       </header>
       {/* --- main --- */}
       <main>
         <div className={s.main_left}>
-          <h1 className={s.titulo}>Un perro es la única cosa en la tierra que te amará más de lo que se ama a sí mismo</h1>
-          <p className={s.sub_titulo}>Tu mejor amigo te conoce mejor que nadie, tu lo conoces a el? averígualo con la mejor app sobre nuestros peludos favoritos.</p>
-          <Link to="/home" className={s.acceder_grande}>Acceder<img className={s.arrow} src={arrow} alt="arrow" /></Link>
+          <h1 className={s.titulo}>
+            Un perro es la única cosa en la tierra que te amará más de lo que se
+            ama a sí mismo
+          </h1>
+          <p className={s.sub_titulo}>
+            No importa cuánto tiempo estemos lejos, siempre nos reciben con una
+            alegría desbordante y una cola que no deja de moverse
+          </p>
+          <Link to="/home" className={s.acceder_grande}>
+            Acceder
+            <img className={s.arrow} src={arrow} alt="arrow" />
+          </Link>
         </div>
 
         <div className="card1">
-      <div className="card1-body">
-        <video className="card1-video" autoPlay loop muted playsInline>
-          <source src={currentVideoUrl} type="video/mp4" />
-        </video>
-      </div>
-    </div>
+          <div className="card1-body">
+            <video className="card1-video" autoPlay loop muted playsInline>
+              <source src={currentVideoUrl} type="video/mp4" />
+            </video>
+          </div>
+        </div>
       </main>
 
       <div className={s.div_functions}>
         <div className={s.funciones}>
           <img className={s.icon} src={icon1} alt="icon" />
-          <p className={s.funcion_desc}>Busca a tu  perro favorito</p>
+          <p className={s.funcion_desc}>Busca a tu perro favorito</p>
         </div>
 
         <div className={s.funciones}>
           <img className={s.icon} src={icon2} alt="icon" />
-          <p className={s.funcion_desc}>Filta por raza o temperamento</p>
+          <p className={s.funcion_desc}>Filtra por raza o temperamento</p>
         </div>
 
         <div className={s.funciones}>
@@ -73,17 +89,21 @@ function LandingPage() {
 
         <div className={s.funciones}>
           <img className={s.icon} src={icon4} alt="icon" />
-          <p className={s.funcion_desc}>Razas de <br /> todo el mundo</p>
+          <p className={s.funcion_desc}>
+            Razas de <br /> todo el mundo
+          </p>
         </div>
 
         <div className={s.funciones}>
           <img className={s.icon} src={icon5} alt="icon" />
-          <p className={s.funcion_desc}>llevalos <br /> siempre contigo</p>
+          <p className={s.funcion_desc}>
+            llevalos <br /> siempre contigo
+          </p>
         </div>
       </div>
       <Footer />
     </div>
-  )
+  );
 }
 
 export default LandingPage;

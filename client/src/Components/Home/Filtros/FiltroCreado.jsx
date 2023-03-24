@@ -14,7 +14,7 @@ function FiltroCreado({currentPage, setCurrentPage}) {
   return (
     <div>
       <select onChange={handleSelect}>
-        <option selected disabled>selecciona uno</option>
+        <option disabled>selecciona uno</option>
         <option value="All">Todos</option>
         <option value="Api">API</option>
         <option value="creados">Base de datos</option>
