@@ -9,6 +9,22 @@ function DogDetail({ dog }) {
     "https://player.vimeo.com/external/364841370.sd.mp4?s=8a3174708b70bbb90526d5aad598bd918223c202&profile_id=164&oauth2_token_id=57447761",
     "https://player.vimeo.com/external/358531424.sd.mp4?s=34a656580e2899b3e7b2fb0ece9a5910cfe53566&profile_id=164&oauth2_token_id=57447761",
     "https://player.vimeo.com/external/210743842.sd.mp4?s=fcf7c509e74a02a35175a2d9294eb2e25d6c74ef&profile_id=164&oauth2_token_id=57447761",
+    "https://player.vimeo.com/external/403278689.hd.mp4?s=791eaa4bfecbae421613ab0401a39b429542f18d&profile_id=174&oauth2_token_id=57447761",
+    "https://player.vimeo.com/external/353569084.sd.mp4?s=f8537e25485085a53b1103a3cc2c1f2b9952b1a2&profile_id=165&oauth2_token_id=57447761",
+    "https://player.vimeo.com/external/436938412.sd.mp4?s=6264885c3c113b5d0441cd34a12777eaddb87601&profile_id=165&oauth2_token_id=57447761",
+    "https://player.vimeo.com/external/479032184.sd.mp4?s=8494309e0ae0bee8397869ae8870a17af9fd8ced&profile_id=165&oauth2_token_id=57447761",
+    "https://player.vimeo.com/external/479032164.sd.mp4?s=34217d57b8f0f4c17e134ab44d3851d406861e0b&profile_id=165&oauth2_token_id=57447761",
+    "https://player.vimeo.com/external/502185160.sd.mp4?s=ad105954dbf88c84d53e45f919224d50b28aad3f&profile_id=165&oauth2_token_id=57447761",
+    "https://player.vimeo.com/external/210743769.sd.mp4?s=d8335a711eb59540361e4ddd2541aa922ea92112&profile_id=164&oauth2_token_id=57447761",
+    "https://player.vimeo.com/external/353573691.sd.mp4?s=4a67049e97615f7094fda8b838b1cf62ecf3a086&profile_id=164&oauth2_token_id=57447761",
+    "https://player.vimeo.com/external/353570447.sd.mp4?s=65b53a681dcad3718826f267a77542cda710b2c0&profile_id=164&oauth2_token_id=57447761",
+    "https://player.vimeo.com/external/473351215.sd.mp4?s=66f87a53959edf5cd26ee234e3de9684f1e1a6c2&profile_id=165&oauth2_token_id=57447761",
+    "https://player.vimeo.com/external/364708089.sd.mp4?s=c100dd3baed7609771e85ba9d094a3ef5fa3de74&profile_id=164&oauth2_token_id=57447761",
+    "https://player.vimeo.com/external/473308772.sd.mp4?s=fa0650fd6121c90ba84ec0a6eb6fbab4d5947b00&profile_id=165&oauth2_token_id=57447761",
+    "https://player.vimeo.com/external/434427931.sd.mp4?s=00787916e1a028468c347c07055d3f28fc8ba331&profile_id=165&oauth2_token_id=57447761",
+    "https://player.vimeo.com/external/592768722.sd.mp4?s=5d339ef64df0be78292ac109fc32103907baaa99&profile_id=165&oauth2_token_id=57447761",
+    "https://player.vimeo.com/external/436936585.sd.mp4?s=94e2bd194cc4f8aecefe3ec5d126dfb7d43c2909&profile_id=165&oauth2_token_id=57447761",
+    "https://player.vimeo.com/external/592768709.sd.mp4?s=a033e432014451fb628b19d4a19767aced08a36c&profile_id=165&oauth2_token_id=57447761"
   ]);
   const [currentVideoUrl, setCurrentVideoUrl] = useState(localStorage.getItem('currentVideoUrl') || '');
 
