@@ -10,7 +10,7 @@ import dotenv from "dotenv";
 import axios from 'axios';
 dotenv.config();
 
-axios.defaults.baseURL = process.env.REACT_APP_API || "https://pi-dogs-production-bc2f.up.railway.app";
+axios.defaults.baseURL ="https://pi-dogs-production-bc2f.up.railway.app";
 
 ReactDOM.render(
   <React.StrictMode>
