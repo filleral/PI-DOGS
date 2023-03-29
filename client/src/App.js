@@ -5,7 +5,9 @@ import Home from './Components/Home/Home';
 import NewDog from './Components/NewDog/NewDog';
 import Details from './Components/Details/Details';
 import './App.css';
+import axios from 'axios';
 
+axios.defaults.baseURL ="https://pi-dogs-production-bc2f.up.railway.app";
 function App() {
   return (
     <div className="App">

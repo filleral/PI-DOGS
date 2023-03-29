@@ -13,7 +13,7 @@ export const DOG_WANTED = 'DOG_WANTED';
 export const getDogs = () => {
   return async function(dispatch) {
     try {
-      let dogs = (await axios("https://pi-dogs-production-bc2f.up.railway.app/dogs")).data
+      let dogs = (await axios("/dogs")).data
       return dispatch({
       type: GET_DOGS,
       payload: dogs
@@ -27,7 +27,7 @@ export const getDogs = () => {
 export const getDetail = (id) => {
   return async function(dispatch) {
     try {
-      let details = (await axios(`https://pi-dogs-production-bc2f.up.railway.app/dogs/${id}`)).data
+      let details = (await axios(`/dogs/${id}`)).data
       return dispatch({
       type: GET_DETAILS,
       payload: details
@@ -41,7 +41,7 @@ export const getDetail = (id) => {
 export const dogPost = (payload) => {
   return async function(dispatch) {
     try {
-      await axios.post("https://pi-dogs-production-bc2f.up.railway.app/dogs", payload);
+      await axios.post("/dogs", payload);
       console.log(dispatch)
       alert("perro creado correctamente")
       return dispatch({
@@ -57,7 +57,7 @@ export const dogPost = (payload) => {
 export const getTemperament = () => {
   return async function(dispatch) {
     try {
-      let temperaments = (await axios("https://pi-dogs-production-bc2f.up.railway.app/temperaments")).data;
+      let temperaments = (await axios("/temperaments")).data;
       let allTemps = temperaments.map(e => e)
       return dispatch({
         type: GET_TEMPERAMENT,
@@ -72,7 +72,7 @@ export const getTemperament = () => {
 export const searchDogs = (raza) => {
   return async function(dispatch) {
     try {
-      let dogsWanted = (await axios(`https://pi-dogs-production-bc2f.up.railway.app/search?name=${raza}`)).data;
+      let dogsWanted = (await axios(`/search?name=${raza}`)).data;
       return dispatch({
         type: DOG_WANTED,
         payload: dogsWanted
